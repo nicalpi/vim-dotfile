@@ -1,0 +1,19 @@
+h1. Usage
+
+* Clone this repo into your home directory either as .vim (linux) or vimfiles (MF
+Windows).
+
+* Create a symbolic link to your .vimrc
+
+<pre>
+<code>
+  ln -s ./vim/vimrc ~/.vimrc
+</code>
+</pre>
+
+
+h1. Please note
+
+I use pathogen in order to bundle plugins in the bundle bunble project, configured for a Debian base distribution. I have no ideas on issues with others distributions or Mac users.
+
+Please refer to <a href='http://www.vim.org/scripts/script.php?script_id=2332'>pathogen install details</a> for more informations.
