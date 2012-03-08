@@ -4,6 +4,7 @@ h1. Usage
 Windows).
 
 * Update all git submodule present in .vim/bundle using
+
 <pre>
 <code>
 git submodule foreach git pull
