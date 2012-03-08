@@ -3,6 +3,13 @@ h1. Usage
 * Clone this repo into your home directory either as .vim (linux) or vimfiles (MF
 Windows).
 
+* Update all git submodule present in .vim/bundle using
+<pre>
+<code>
+git submodule foreach git pull
+</code>
+</pre>
+
 * Create a symbolic link to your .vimrc
 
 <pre>
