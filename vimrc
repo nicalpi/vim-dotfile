@@ -1,5 +1,4 @@
 command! W :w'
-
 filetype on
 filetype off
 call pathogen#infect()
