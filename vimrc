@@ -48,6 +48,7 @@ set gfn=DejaVu\ Sans\ Mono\ Bold\ 11
 set t_Co=256
 set laststatus=2
 set hidden
+set shortmess=a
 syntax enable
 colorscheme railscasts
 
@@ -78,10 +79,10 @@ endfunction
 	inoremap <C-L> <C-O>:nohls<CR>
 
 	"map to bufexplorer
-	nnoremap <C-B> :BufExplorer<cr>
+	nnoremap <C-B> :BufExplorer<CR>
 
 	"map to fuzzy finder text mate stylez
-	nnoremap <c-n> :NERDTreeToggle<CR>
+	nnoremap <c-n> :NERDTreeToggle<CR><CR>
 
 	nnoremap <c-t> :CommandT<CR>
 
