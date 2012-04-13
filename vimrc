@@ -7,7 +7,7 @@ set shell=/bin/sh
 highlight Pmenu ctermbg=238 gui=bold
 "set background=light
 set nocompatible
-set term=xterm
+"set term=xterm
 set backspace=indent,eol,start
 set guioptions=-T " enables menubar
 set guioptions=+m " enables menubar
@@ -48,7 +48,7 @@ set gfn=DejaVu\ Sans\ Mono\ Bold\ 11
 set t_Co=256
 set laststatus=2
 set hidden
-set shortmess=a
+set shortmess=atI
 syntax enable
 colorscheme railscasts
 
@@ -196,3 +196,13 @@ nmap <leader>s<up>     :leftabove  new<CR>
 nmap <leader>s<down>   :rightbelow new<CR>
 
 let g:AutoCloseExpandEnterOn = ""
+
+" disable arrow keys
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+imap <up> <nop>
+imap <down> <nop>
+imap <left> <nop>
+imap <right> <nop>
