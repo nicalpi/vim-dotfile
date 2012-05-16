@@ -1,4 +1,4 @@
-command! W :w'
+command! W :w
 filetype on
 filetype off
 call pathogen#infect()
@@ -103,7 +103,7 @@ endfunction
 
 	nnoremap / /\v
 	vnoremap / /\v
-	nnoremap ; :
+	" nnoremap ; :
 	nnoremap <Leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
 	nnoremap <c-c> :TComment<CR>
@@ -151,7 +151,7 @@ map <F4> :TlistToggle<cr>
 " bind control-l to hashrocket
 imap <C-l> <Space>=><Space>
 
-nmap ,, <C-^>
+nmap ## <C-^>
 
 autocmd BufWritePre  *  call StripTrailingWhite()
 
