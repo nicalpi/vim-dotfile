@@ -1,13 +1,13 @@
 h1. Usage
 
-* Clone this repo into your home directory either as .vim (linux) or vimfiles (MF
+* Clone this repo into your home directory either as .vim (linux) or vimfiles (MS
 Windows).
 
-* Update all git submodule present in .vim/bundle using
+* Update all git submodule present in .vim/bundle using Vundle
 
 <pre>
 <code>
-git submodule foreach git pull
+vim +BundleInstall +qall
 </code>
 </pre>
 
@@ -22,6 +22,5 @@ git submodule foreach git pull
 
 h1. Please note
 
-I use pathogen in order to bundle plugins in the bundle bunble project, configured for a Debian base distribution. I have no ideas on issues with others distributions or Mac users.
+This repo is now using <a href='https://github.com/gmarik/vundle'>Vundle</a> to manage dependencies.
 
-Please refer to <a href='http://www.vim.org/scripts/script.php?script_id=2332'>pathogen install details</a> for more informations.

@@ -1,12 +1,64 @@
+set nocompatible
 command! W :w
-filetype on
 filetype off
-call pathogen#infect()
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+
+Bundle 'vim-scripts/YankRing.vim.git'
+Bundle 'mileszs/ack.vim.git'
+Bundle 'jayferd/eco.vim.git'
+Bundle 'mattn/gist-vim.git'
+Bundle 'juvenn/mustache.vim.git'
+Bundle 'scrooloose/nerdtree.git'
+Bundle 'vim-scripts/ruby-matchit.git'
+Bundle 'ervandew/supertab.git'
+Bundle 'scrooloose/syntastic.git'
+Bundle 'godlygeek/tabular.git'
+Bundle 'MarcWeber/vim-addon-mw-utils.git'
+Bundle 'Townk/vim-autoclose.git'
+Bundle 'onehouse/vim-bufexplorer.git'
+Bundle 'kchmck/vim-coffee-script.git'
+Bundle 'tpope/vim-cucumber.git'
+Bundle 'tpope/vim-endwise.git'
+Bundle 'tpope/vim-fugitive.git'
+Bundle 'tpope/vim-git'
+Bundle 'tpope/vim-haml.git'
+Bundle 'henrik/vim-indexed-search.git'
+Bundle 'tpope/vim-markdown.git'
+Bundle 'edsono/vim-matchit.git'
+Bundle 'Lokaltog/vim-powerline.git'
+Bundle 'tpope/vim-rails.git'
+Bundle 'tpope/vim-repeat.git'
+Bundle 'skwp/vim-rspec.git'
+Bundle 'vim-ruby/vim-ruby.git'
+Bundle 'tpope/vim-rvm.git'
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle 'garbas/vim-snipmate.git'
+Bundle "https://github.com/honza/snipmate-snippets.git"
+Bundle 'tpope/vim-surround.git'
+Bundle 'tpope/vim-unimpaired.git'
+Bundle 'kana/vim-textobj-user'
+Bundle 'nelstrom/vim-textobj-rubyblock.git'
+Bundle 'kien/ctrlp.vim.git'
+Bundle 'gregsexton/gitv'
+Bundle 'pangloss/vim-javascript'
+Bundle 'scrooloose/syntastic'
+Bundle 'mattn/gist-vim'
+Bundle 'juvenn/mustache.vim'
+Bundle 'scrooloose/nerdcommenter.git'
+
+filetype plugin indent on     " required! "
+
+runtime macros/matchit.vim
+
 syntax on
 set shell=/bin/sh
 highlight Pmenu ctermbg=238 gui=bold
 "set background=light
-set nocompatible
 "set term=xterm
 set backspace=indent,eol,start
 set guioptions=-T " enables menubar
@@ -60,8 +112,6 @@ let g:ackprg="ack-grep -H --nocolor --nogroup --column --ignore-dir='tmp'"
 let mapleader = ","
 
 filetype on
-filetype plugin on
-filetype indent on
 compiler ruby
 
 function! g:ToggleNuMode()
