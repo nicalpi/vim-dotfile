@@ -134,8 +134,6 @@ endfunction
 	"map to fuzzy finder text mate stylez
 	nnoremap <c-n> :NERDTreeToggle<CR><CR>
 
-	nnoremap <c-t> :CommandT<CR>
-
 	"map Q to something useful
 	noremap Q gq
 
@@ -155,9 +153,6 @@ endfunction
 	vnoremap / /\v
 	" nnoremap ; :
 	nnoremap <Leader>W :%s/\s\+$//<cr>:let @/=''<CR>
-
-	nnoremap <c-c> :TComment<CR>
-
 
 " "ruby
 autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
@@ -239,7 +234,8 @@ nmap <leader>sw<left>  :topleft  vnew<CR>
 nmap <leader>sw<right> :botright vnew<CR>
 nmap <leader>sw<up>    :topleft  new<CR>
 nmap <leader>sw<down>  :botright new<CR>
-" " buffer
+
+" buffer
 nmap <leader>s<left>   :leftabove  vnew<CR>
 nmap <leader>s<right>  :rightbelow vnew<CR>
 nmap <leader>s<up>     :leftabove  new<CR>
