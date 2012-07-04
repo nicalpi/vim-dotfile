@@ -15,7 +15,7 @@ vim +BundleInstall +qall
 
 <pre>
 <code>
-  ln -s ./vim/vimrc ~/.vimrc
+  ln -s ./.vim/vimrc ~/.vimrc
 </code>
 </pre>
 
