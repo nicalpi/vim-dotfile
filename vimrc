@@ -50,6 +50,11 @@ Bundle 'scrooloose/syntastic'
 Bundle 'mattn/gist-vim'
 Bundle 'juvenn/mustache.vim'
 Bundle 'scrooloose/nerdcommenter.git'
+Bundle 'git://github.com/vim-scripts/Tagbar.git'
+Bundle 'git://github.com/nathanaelkane/vim-indent-guides.git'
+Bundle 'git://github.com/altercation/vim-colors-solarized.git'
+Bundle 'benmills/vimux.git'
+Bundle 'pgr0ss/vimux-ruby-test.git'
 
 filetype plugin indent on     " required! "
 
@@ -61,8 +66,7 @@ highlight Pmenu ctermbg=238 gui=bold
 "set background=light
 "set term=xterm
 set backspace=indent,eol,start
-set guioptions=-T " enables menubar
-set guioptions=+m " enables menubar
+set guioptions= " remove all guioptions
 set history=1000
 set noautowrite         " autosave off :next etc
 set nobackup
@@ -84,8 +88,10 @@ set nofoldenable        "dont fold by default
 set wildmode=list:longest   "make cmdline tab completion similar to bash
 set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
 set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
+set wildignore+=*/.hg/*
+set wildignore+=*/.git/*
 set list
-set nu
+set rnu
 set listchars=tab:»·
 set listchars+=trail:·
 set formatoptions-=o
@@ -96,7 +102,7 @@ set cpo-=<
 set wcm=<C-Z>
 set mouse=a
 set ttymouse=xterm2
-set gfn=DejaVu\ Sans\ Mono\ Bold\ 11
+set gfn=DejaVu\ Sans\ Mono\ 12
 set t_Co=256
 set laststatus=2
 set hidden
@@ -108,6 +114,10 @@ let g:SuperTabDefaultCompletionType = "context"
 
 let g:syntastic_enable_signs=1
 let g:ackprg="ack-grep -H --nocolor --nogroup --column --ignore-dir='tmp'"
+
+let g:indent_guides_guide_size = 1
+
+
 
 let mapleader = ","
 
@@ -121,6 +131,9 @@ function! g:ToggleNuMode()
     set rnu
   endif
 endfunction
+
+"use the . in VMODE
+vnoremap . :norm.<CR>
 
 "Mapping
 
@@ -190,7 +203,7 @@ endfunction
 let Tlist_Use_Right_Window = 1
 let Tlist_Ctags_Cmd = "/usr/bin/ctags"
 let Tlist_WinWidth = 50
-map <F4> :TlistToggle<cr>
+map <F4> :TagbarToggle<CR>
 
 
 " bind control-l to hashrocket
@@ -242,6 +255,21 @@ nmap <leader>s<up>     :leftabove  new<CR>
 nmap <leader>s<down>   :rightbelow new<CR>
 
 let g:AutoCloseExpandEnterOn = ""
+
+" Rspec
+function! RSpecFile()
+    execute("!clear && rspec " . expand("%p"))
+endfunction
+
+map <leader>R :call RSpecFile() <CR>
+command! RSpecFile call RSpecFile()
+
+function! RSpecCurrent()
+  execute("!clear && rspec " . expand("%p") . ":" . line("."))
+endfunction
+
+map <leader>r :call RSpecCurrent() <CR>
+command! RSpecCurrent call RSpecCurrent()
 
 " disable arrow keys
 map <up> <nop>

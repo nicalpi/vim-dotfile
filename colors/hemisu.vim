@@ -1,7 +1,7 @@
 " hemisu.vim - Vim color scheme
 " ----------------------------------------------------------
 " Author:	Noah Frederick (http://noahfrederick.com/)
-" Version:	3.2
+" Version:	3.3
 " License:	Creative Commons Attribution-NonCommercial
 " 			3.0 Unported License       (see README.md)
 " ----------------------------------------------------------
@@ -22,18 +22,18 @@ let g:colors_name="hemisu"
 let s:black=           { "gui": "#000000", "cterm": "16"  }
 let s:white=           { "gui": "#FFFFFF", "cterm": "231" }
 let s:almostWhite=     { "gui": "#EEEEEE", "cterm": "255" }
-let s:almostBlack=     { "gui": "#111111", "cterm": "235" }
-let s:middleDarkGrey=  { "gui": "#777777", "cterm": "238" }
+let s:almostBlack=     { "gui": "#111111", "cterm": "233" }
+let s:middleDarkGrey=  { "gui": "#777777", "cterm": "241" }
 let s:middleLightGrey= { "gui": "#999999", "cterm": "246" }
 let s:lightGrey=       { "gui": "#BBBBBB", "cterm": "249" }
-let s:darkGrey=        { "gui": "#444444", "cterm": "233" }
+let s:darkGrey=        { "gui": "#444444", "cterm": "238" }
 
 let s:darkPink=        { "gui": "#63001C", "cterm": "88"  }
 let s:middleDarkPink=  { "gui": "#FF0055", "cterm": "197" }
 let s:middleLightPink= { "gui": "#D65E76", "cterm": "167" }
 let s:lightPink=       { "gui": "#FFAFAF", "cterm": "217" }
 
-let s:darkBlue=        { "gui": "#005F87", "cterm": "17"  }
+let s:darkBlue=        { "gui": "#005F87", "cterm": "24"  }
 let s:middleDarkBlue=  { "gui": "#538192", "cterm": "24"  }
 let s:middleLightBlue= { "gui": "#9FD3E6", "cterm": "116" }
 let s:lightBlue=       { "gui": "#CBE4EE", "cterm": "195" }
@@ -154,7 +154,7 @@ hi! link Question	MoreMsg
 hi! link ModeMsg	MoreMsg
 hi! link TabLineFill	StatusLineNC
 hi! link LineNr		NonText
-hi! link SpecialKey	Directory
+hi! link SpecialKey	NonText
 hi! clear Ignore
 
 "}}}
